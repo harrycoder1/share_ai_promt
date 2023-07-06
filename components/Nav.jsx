@@ -38,7 +38,7 @@ useEffect(()=>{
 <div className='flex gap-3 md:gap-5 '>
     <Link href={'/create-prompt'}  className='black_btn'>Create Post</Link>
     <button type="button" onClick={signOut} className='outline_btn'>Sign Out </button>
-<Link href={'/profie'}>
+<Link href={'/profile'}>
     <Image 
     src={session?.user.image} 
     width={37} 
@@ -70,7 +70,7 @@ Object.values(providers).map((provider)=>(
 
     {session?.user ?(
     <div className='flex '>
-   <Image src={'/assets/images/logo.svg'} width={37} height={37} className='rounded-full' alt='Profile'
+   <Image src={session?.user.image} width={37} height={37} className='rounded-full' alt='Profile'
    onClick={()=>setToggleDropDown((prev)=>!prev)}
    />
 {toggleDropdown &&
